@@ -1,0 +1,16 @@
+{
+    "mcpServers": {
+        "sap-docs-local": {
+            "command": "node",
+            "args": [
+                "/home/miyasuta/projects/mcp-sap-docs/dist/src/server.js"
+            ]          
+        },
+        "cds-mcp": {
+            "type": "stdio",
+            "command": "cds-mcp",
+            "args": [],
+            "env": {}
+        }
+    }
+}
