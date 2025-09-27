@@ -11,7 +11,12 @@
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2",
-    "@sap/dev-cap-tools": "^1.31.0"
+    "@sap/dev-cap-tools": "^1.31.0",
+    "@cap-js/cds-types": "^0.14.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4",
+    "typescript": "^5",
+    "@cap-js/cds-typer": ">=0.1"
   },
   "scripts": {
     "start": "cds-serve"
@@ -31,5 +36,8 @@
         "csrfInBatch": true
       }
     }
+  },
+  "imports": {
+    "#cds-models/*": "./@cds-models/*/index.js"
   }
 }
