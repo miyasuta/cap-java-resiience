@@ -31,9 +31,12 @@ public class ConsumeBPServiceHandler implements EventHandler {
     public Result onReadBusinessPartners(CdsReadEventContext context) {
         // Create Resilience Configuration with Cache settings
         ResilienceConfiguration resilienceConfig = ResilienceConfiguration.of(BusinessPartnerService.class);
-        
+
+        // Include query parameters in cache key by using the query string as parameter
+        String queryKey = context.getCqn().toString();
         ResilienceConfiguration.CacheConfiguration cacheConfig = ResilienceConfiguration.CacheConfiguration
-            .of(Duration.ofSeconds(30)).withoutParameters();
+            .of(Duration.ofSeconds(30))
+            .withParameters(queryKey);
         resilienceConfig.cacheConfiguration(cacheConfig);
 
         // Execute the service call within cache configuration
