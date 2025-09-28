@@ -1,3 +1,13 @@
+## Projects
+### business-partner-mock
+- This is a CAP Node.js project
+- Provides mock API of Business Partners
+
+### cap-java-resilience
+- THis is a CAP Java project
+- Consumes the mock Business Partner service provided by the Node.js project
+- The plan is to add chaching and resilience functionalities provided by SAP Cloud SDK
+
 ## MCP Server Usage Rules
 
 ### CAP MCP Server (@cap-js/mcp-server)
