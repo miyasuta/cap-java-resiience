@@ -1,9 +1,5 @@
-using { BusinessPartnerA2X as bupa} from './external/BusinessPartnerA2X';
+using { bp as db } from '../db/schema';
 
 service BusinessPartnerService {
-    entity BusinessPartners as projection on bupa.A_BusinessPartner {
-        key BusinessPartner,
-        BusinessPartnerCategory,
-        BusinessPartnerFullName        
-    }
+    entity BusinessPartners as projection on db.BusinessPartners
 }
