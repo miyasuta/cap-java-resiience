@@ -8,6 +8,10 @@
 GET {{server}}/odata/v4/ConsumeBPService/LocalBusinessPartners
 Authorization: Basic {{username}}:{{password}}
 
+### LocalBusinessPartners
+# @name LocalBusinessPartners_GET
+GET {{server}}/odata/v4/ConsumeBPService/LocalBusinessPartners?$filter=BusinessPartnerCategory eq '1'
+Authorization: Basic {{username}}:{{password}}
 
 ### LocalBusinessPartners
 # @name LocalBusinessPartners_POST
