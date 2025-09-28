@@ -17,6 +17,9 @@ cds:
         destination:
           # name: BusinessPartnerService
           properties:
-          url: http://localhost:4004/odata/v4/business-partner
-          authentication: NoAuthentication
+            url: http://localhost:4004
+            authentication: NoAuthentication            
         type: odata-v4
+        http:
+          service: business-partner
+          suffix: /odata/v4

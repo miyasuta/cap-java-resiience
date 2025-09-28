@@ -1,0 +1,42 @@
+@server=http://localhost:8080
+@username=authenticated
+@password=
+
+
+### LocalBusinessPartners
+# @name LocalBusinessPartners_GET
+GET {{server}}/odata/v4/ConsumeBPService/LocalBusinessPartners
+Authorization: Basic {{username}}:{{password}}
+
+
+### LocalBusinessPartners
+# @name LocalBusinessPartners_POST
+POST {{server}}/odata/v4/ConsumeBPService/LocalBusinessPartners
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "BusinessPartner": "rtners-361",
+  "BusinessPartnerCategory": "1",
+  "BusinessPartnerFullName": "BusinessPartnerFullName-361"
+}
+
+
+### LocalBusinessPartners
+# @name LocalBusinessPartners_PATCH
+PATCH {{server}}/odata/v4/ConsumeBPService/LocalBusinessPartners/rtners-361
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "BusinessPartner": "rtners-361",
+  "BusinessPartnerCategory": "1",
+  "BusinessPartnerFullName": "BusinessPartnerFullName-361"
+}
+
+
+### LocalBusinessPartners
+# @name LocalBusinessPartners_DELETE
+DELETE {{server}}/odata/v4/ConsumeBPService/LocalBusinessPartners/rtners-361
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
