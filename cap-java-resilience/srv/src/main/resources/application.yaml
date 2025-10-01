@@ -23,3 +23,36 @@ cds:
         http:
           service: business-partner
           suffix: /odata/v4
+
+---
+spring:
+  config:
+    activate:
+      on-profile: cloud
+cds:
+  data-source:
+    auto-config:
+      enabled: false
+  remote:
+    services:
+      '[BusinessPartnerService]':
+        destination: 
+          name: business-partner-mock-srv
+        type: odata-v4
+        http:
+          service: business-partner
+          suffix: /odata/v4
+---
+management:
+  endpoint:
+    health:
+      show-components: always
+      probes.enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
+  health:
+    defaults.enabled: false
+    ping.enabled: true
+    db.enabled: true
